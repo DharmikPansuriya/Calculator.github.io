@@ -5,44 +5,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator</title>
-    <style>
-        table,
-        th,
-        td {
-            /* border: 1px solid black; */
-            border-collapse: collapse;
-            font-size: 30px;
-            /* width: 15cm; */
-            text-align: center;
-            padding: 0.5rem;
-        }
-        button {
-            font-size: 1.7rem;
-            padding: 0.7rem;
-            width: 3cm;
-            color: white;
-            border: 1px solid black;
-            border-radius: 5px;
-            background-color: rgb(9, 115, 119);
-        }
-
-        #answer,
-        #display {
-            border: 1px solid black;
-            padding: 0.3cm;
-            width: 12.8cm;
-            font-size: 0.7cm;
-            margin-bottom: 0.3cm;
-            border: 1px solid black;
-            border-radius: 5px;
-            background-color: rgb(144, 228, 228);
-        }
-
-        h1 {
-            font-size: 2.7rem;
-        }
-    </style>
+    <link rel="stylesheet" href="calculator.css">
+    <script src="calculator.js"></script>
+    <title> Calculator </title>
 </head>
 
 <body>
@@ -82,22 +47,6 @@
                 <td><button value="solve" onclick="calculate()" /> =</button></td>
             </tr>
         </table>
-        <p id="new"></p>
     </center>
 </body>
-<script>
-    function reset() {
-        location.reload();
-    }
-    function show(val) {
-        document.getElementById("display").value += val;
-    }
-    function calculate() {
-        var temp = document.getElementById("display").value;
-        var result = eval(temp);
-        document.getElementById("answer").value = result;
-    }
-
-</script>
-
 </html>

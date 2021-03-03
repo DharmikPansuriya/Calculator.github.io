@@ -1,0 +1,32 @@
+table,
+th,
+td {
+  border-collapse: collapse;
+  font-size: 30px;
+  text-align: center;
+  padding: 0.5rem;
+}
+button {
+  font-size: 1.7rem;
+  padding: 0.7rem;
+  width: 3cm;
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: rgb(9, 115, 119);
+}
+
+#answer,
+#display {
+  border: 1px solid black;
+  padding: 0.3cm;
+  width: 12.8cm;
+  font-size: 0.7cm;
+  margin-bottom: 0.3cm;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: rgb(144, 228, 228);
+}
+h1 {
+  font-size: 2.7rem;
+}
