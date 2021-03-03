@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+        table,
+        th,
+        td {
+            /* border: 1px solid black; */
+            border-collapse: collapse;
+            font-size: 30px;
+            /* width: 15cm; */
+            text-align: center;
+            padding: 0.5rem;
+        }
+        button {
+            font-size: 1.7rem;
+            padding: 0.7rem;
+            width: 3cm;
+            color: white;
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: rgb(9, 115, 119);
+        }
+
+        #answer,
+        #display {
+            border: 1px solid black;
+            padding: 0.3cm;
+            width: 12.8cm;
+            font-size: 0.7cm;
+            margin-bottom: 0.3cm;
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: rgb(144, 228, 228);
+        }
+
+        h1 {
+            font-size: 2.7rem;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Calculator</h1>
+        <input type="text" id="display" placeholder="Calculation"><br>
+        <input type="text" id="answer" placeholder="Answer">
+        <table>
+            <tr>
+                <td colspan="3">
+                    <button style="width: 10cm;" onclick="reset()"> Clear </button>
+                </td>
+                <td><button value="/" onclick="show('/')" /> / </button></td>
+            </tr>
+            <tr>
+                <td><button value="7" onclick="show('7')" /> 7 </button></td>
+                <td><button value="8" onclick="show('8')" /> 8 </button></td>
+                <td><button value="9" onclick="show('9')" /> 9 </button></td>
+                <td><button value="*" onclick="show('*')" /> * </button></td>
+            </tr>
+            <tr>
+                <td><button value="4" onclick="show('4')" /> 4 </button></td>
+                <td><button value="5" onclick="show('5')" /> 5 </button></td>
+                <td><button value="6" onclick="show('6')" /> 6 </button></td>
+                <td><button value="-" onclick="show('-')" /> - </button></td>
+            </tr>
+            <tr>
+                <td><button value="1" onclick="show('1')" /> 1 </button></td>
+                <td><button value="2" onclick="show('2')" /> 2 </button></td>
+                <td><button value="3" onclick="show('3')" /> 3 </button></td>
+                <td><button value="+" onclick="show('+')" /> + </button></td>
+            </tr>
+            <tr>
+                <td><button value="%" onclick="show('%')" /> % </button></td>
+                <td><button value="0" onclick="show('0')" /> 0 </button></td>
+                <td><button value="." onclick="show('.')" /> . </button></td>
+                <td><button value="solve" onclick="calculate()" /> =</button></td>
+            </tr>
+        </table>
+        <p id="new"></p>
+    </center>
+</body>
+<script>
+    function reset() {
+        location.reload();
+    }
+    function show(val) {
+        document.getElementById("display").value += val;
+    }
+    function calculate() {
+        var temp = document.getElementById("display").value;
+        var result = eval(temp);
+        document.getElementById("answer").value = result;
+    }
+
+</script>
+
+</html>
