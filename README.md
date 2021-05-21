@@ -1,4 +1,2 @@
 # Calculator
-Created a Calculator using HTML, CSS and JavaScript.
-
-I am beginner and learning JavaScript. Also trying to create different applications using JavaScript.
+I created a simple arithmetic web calculator using HTML, CSS and JavaScript.
